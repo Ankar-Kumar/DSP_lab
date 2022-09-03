@@ -6,26 +6,24 @@ close all
 
 x = input('enter the input sequence of a signal x(n)');
 n1 = input('enter the time sample range:');
-y = input('enter the input sequence of a signal y(n)');
+h = input('enter the input sequence of a signal y(n)');
 n2 = input('enter the time sample range:');
 
-n2=-fliplr(n2);
-y = fliplr(y); %second signal
+n2 = -fliplr(n2);
+y = fliplr(h); %second signal
+
 N1=length(x);
 N2=length(y);
 X=[x, zeros(1,N2)]; %padding of N2 zeros
 Y=[y, zeros(1,N1)]; %padding of N1 zeros
 for i=1:N1+N2-1
     r(i)=0
-    for j=1:N1
-        if(i+1-j>0)
-            r(i)=r(i)+X(j)*Y(i+1-j)
-        else
-        end
+    for j=1:i
+       r(i)=r(i)+X(j)*Y(i+1-j)       
     end
 end
 
-rr=xcorr(x,y);
+rr=xcorr(x,h);
 rr
 r
 mn=min(n1)+min(n2)

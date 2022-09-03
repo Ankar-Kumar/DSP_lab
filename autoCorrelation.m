@@ -10,11 +10,8 @@ Y = [h, zeros(1, n)];
 
 for i=1:n+n-1
   y(i)=0;
-  for j=1:n
-    if(i-j+1>0)
+  for j=1:i   
       y(i)= y(i) + X(j)*Y(i+1-j);
-    else
-     end
   end
 end
 yy=xcorr(x,x)
