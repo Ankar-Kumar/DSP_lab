@@ -30,7 +30,7 @@ hold on
 % subplot(2,1,1)
 % stem(t,x);
 
-a1=12
+a1=12  %jokhn ekta signal dekhte parbi na tokhn amplitude change kre dibi 
 x1=a1*sin(2*pi*f1*t)+a2*sin(2*pi*f2*t)+a3*sin(2*pi*f3*t)
 signal1=x1;
 nbit1=2
@@ -42,10 +42,8 @@ signal1=signal1/scalingFac1;
 signal1=round(signal1)
 signal1=signal1*scalingFac1;
 
-%8 bit
-
 signal2=x;
-nbit2=4
+nbit2=4   %nbit er man 1,2,4,8,16,32,64 eivabe bosia jar jnno ( 9line pore dekh)
 level2=2.^nbit2
 mn1=min(signal2)
 mx1=max(signal2);
@@ -54,6 +52,9 @@ signal2=signal2/scalingFac2;
 signal2=round(signal2)
 signal2=signal2*scalingFac2;
 
+%ei duita value (amplitude) sm asbe...tokhn bolbo oi bit er jnno main signal paua jabe..
+max(x)
+max(signal2)
 
 subplot(2,1,2)
 hold on
@@ -63,10 +64,4 @@ plot(t,signal1,'g')
 hold on
 plot(t,signal2,'r');
 
-max(x)
-max(signal2)
-% % %error
-% signal=signal1-x;
-% subplot(2,1,2)
-% plot(t,signal,'g')
 
