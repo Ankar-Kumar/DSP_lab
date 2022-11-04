@@ -15,7 +15,7 @@ for i=1:n+n-1
   end
 end
 yy=xcorr(x,x)
-yy
+yyzz
 y
 mn=min(n1)+min(n2)
 mx=max(n1)+max(n2)
