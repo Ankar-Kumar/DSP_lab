@@ -6,12 +6,11 @@ fs=8000;
 ts=1/fs;
 N=8;
 n=0:N-1;
-x=sin(2*pi*1000*n*ts) + 0.5*sin(2*pi*2000*n*ts + 3*pi/4);
-figure (1)
-subplot(2,1,1)
-plot(n,x);
+x=3*sin(2*pi*1000*n*ts) + sin(2*pi*3000*n*ts + 3*pi/4);
+% figure (1)
+% subplot(2,1,1)
+% plot(n,x);
 X = zeros(N,1);%per X(0)(0) is initialized to  0;0;0;0;0N
-X
 for m = 1:N
     for n = 1:N
         X(m) = X(m) + x(n)*exp(-2j*pi*(n-1)*(m-1)/N);
@@ -29,7 +28,7 @@ title('X(m) real')
 subplot(3,2,3);
 stem(n,abs(X))
 title('Magnitude')
-y = abs(X).^2/N;
+y = abs(X).^2;
 subplot(3,2,4);
 stem(n,y)
 title('Power Spectrum')

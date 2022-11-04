@@ -1,3 +1,8 @@
+clc;
+clear all;
+close all;
+
+
 a1=10
 a2=20
 a3=40
@@ -6,12 +11,12 @@ f1=4
 f2=8
 f3=16
 
-t=0:0.001:1
+t=0:0.01:1
 x=a1*sin(2*pi*f1*t)+a2*sin(2*pi*f2*t)+a3*sin(2*pi*f3*t)
 
 
 fs1=40
-t1=0:1/40:1
+t1=0:1/fs1:1
 x1=a1*sin(2*pi*f1*t1)+a2*sin(2*pi*f2*t1)+a3*sin(2*pi*f3*t1)
 % t1 x1
 
