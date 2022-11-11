@@ -1,10 +1,11 @@
 clc; close all; clear all;
 
-input_data = zeros(1,10);
-input_data(1) = 1;
+input_data = zeros(1,19);
+input_data=[input_data,ones(1,10)];
 
-y_cofficient = [1 -0.97];
-x_cofficient = [1];
+
+y_cofficient = [1];
+x_cofficient = [1/6 1/6 1/6 1/6 1/6 1/6];
 
 
 % using build-in function

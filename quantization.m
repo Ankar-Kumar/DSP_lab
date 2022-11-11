@@ -62,7 +62,6 @@ max(x)
 max(signal2)
 
 subplot(2,1,2)
-hold on
 plot(t,x,'b')
 hold on
 plot(t,signal1,'g')
